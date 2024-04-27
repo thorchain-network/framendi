@@ -1,0 +1,83 @@
+{
+  "name": "thorchain.network",
+  "version": "1.0.0",
+  "description": "Highly interactive & configurable real-time network monitor for THORChain providing instant insights into THORNode validator performance, liquidity flows & network activity",
+  "author": "crstin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nexain-thormon/framendi.git"
+  },
+  "homepage": "https://thorchain.network",
+  "keywords": [
+    "THORmon",
+    "Framendi",
+    "THORChain",
+    "monitor",
+    "dashboard",
+    "THORNode"
+  ],
+  "engines": {
+    "node": ">=18 <22",
+    "pnpm": "^9.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "pnpm lint:js && pnpm lint:style && pnpm lint:prettier",
+    "lintfix": "prettier --write --list-different . && pnpm lint:js --fix && pnpm lint:style --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --cache",
+    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.**": "prettier --check --ignore-unknown"
+  },
+  "dependencies": {
+    "@carbon/icons-vue": "^10.93.1",
+    "animate.css": "^4.1.1",
+    "core-js": "^3.37.1",
+    "echarts": "^5.5.0",
+    "epic-spinners": "^1.1.0",
+    "floating-vue": "1.0.0-beta.19",
+    "humanize-duration": "^3.32.1",
+    "ipaddr.js": "^2.2.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.17.4",
+    "semver": "^7.6.2",
+    "vue": "^2.7.16",
+    "vue-echarts": "^6.7.3",
+    "vue-global-events": "^1.2.1",
+    "vue-good-table": "^2.21.11",
+    "vue-server-renderer": "^2.7.16",
+    "vue-template-compiler": "^2.7.16",
+    "vue-toastification": "^1.7.14"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.7",
+    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/eslint-config": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/stylelint-module": "^4.2.2",
+    "@prettier/plugin-pug": "^2.5.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "postcss-html": "^1.7.0",
+    "prettier": "^2.8.8",
+    "pug": "^3.0.3",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.77.6",
+    "sass-loader": "^10.5.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^28.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Runic';
+  src: url('~assets/fonts/Noto-Sans-Runic.woff2') format('woff2');
+  unicode-range: U+16B1;
+}
+
+@font-face {
+  font-family: 'Monoid';
+  src: url('~assets/fonts/Monoid-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monoid';
+  src: url('~assets/fonts/Monoid-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monoid';
+  src: url('~assets/fonts/Monoid-Retina.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monoid';
+  src: url('~assets/fonts/Monoid-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

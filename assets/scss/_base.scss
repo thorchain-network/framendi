@@ -1,0 +1,20 @@
+::selection {
+  background: var(--primary-color);
+  color: var(--invert-font-color);
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--global-line-height);
+}

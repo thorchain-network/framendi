@@ -1,0 +1,17 @@
+$vt-toast-background: var(--background-color);
+
+$vt-color-default: var(--background-color);
+$vt-text-color-default: var(--font-color);
+
+$vt-color-success: var(--background-color);
+$vt-text-color-success: var(--font-color);
+
+$vt-font-family: inherit;
+
+@import 'vue-toastification/src/scss/_variables';
+@import 'vue-toastification/src/scss/_toastContainer';
+@import 'toast';
+@import 'closeButton';
+@import 'progressBar';
+@import 'vue-toastification/src/scss/_icon';
+@import 'vue-toastification/src/scss/animations/_bounce';

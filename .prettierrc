@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "trailingComma": "none",
+  "plugins": ["@prettier/plugin-pug"],
+  "pugFramework": "vue",
+  "pugAttributeSeparator": "none",
+  "pugSingleQuote": false
+}

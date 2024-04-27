@@ -1,0 +1,98 @@
+.topbar {
+  display: flex;
+
+  .btn {
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .middle {
+    flex-grow: 1;
+    @extend .normflex;
+  }
+
+  .split,
+  .whatever {
+    border: 1px solid var(--background-color);
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 32px;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    font-weight: bold;
+
+    > div {
+      line-height: 1.5;
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .menu-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    > div,
+    > button,
+    > a {
+      height: 3.5em;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      font-size: 1em;
+      fill: var(--font-color);
+      color: var(--font-color);
+      background-color: var(--background-color);
+      border: 1px solid var(--font-color);
+      border-color: var(--font-color);
+    }
+
+    .v-popper {
+      > * {
+        height: 100%;
+      }
+    }
+
+    .buitoni {
+      @extend .normflex;
+      padding: 0.65em 2em;
+      outline: none;
+
+      &:hover {
+        fill: var(--background-color);
+        color: var(--background-color);
+        background-color: var(--font-color);
+      }
+
+      &:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+
+        &:hover {
+          color: var(--font-color);
+        }
+      }
+
+      &.active,
+      &.nuxt-link-active {
+        color: white !important;
+        background-color: black !important;
+      }
+    }
+  }
+
+  .menu-right {
+    display: flex;
+
+    @media only screen and (max-width: 600px) {
+      flex-flow: column wrap;
+      justify-content: space-between;
+    }
+  }
+}

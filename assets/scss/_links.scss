@@ -1,0 +1,20 @@
+a {
+  cursor: pointer;
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--invert-font-color);
+  }
+}
+
+a.normalize {
+  color: inherit;
+  text-decoration: inherit;
+
+  &:hover {
+    color: var(--success-color-darker);
+    background-color: inherit;
+  }
+}

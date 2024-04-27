@@ -1,0 +1,132 @@
+.btn {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  padding: 0.65em 2em;
+  font-size: 1em;
+  font-family: inherit;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-color: var(--font-color) !important;
+    color: var(--font-color) !important;
+  }
+
+  &:hover {
+    background-color: var(--font-color) !important;
+    color: var(--background-color) !important;
+    border-color: var(--font-color) !important;
+  }
+
+  &.active,
+  &.nuxt-link-active {
+    color: white !important;
+    background-color: black !important;
+  }
+
+  &.btn-default {
+    background-color: var(--font-color);
+    border-color: var(--invert-font-color);
+    color: var(--invert-font-color);
+
+    &:hover,
+    &:focus:not(.btn-ghost) {
+      background-color: var(--secondary-color);
+      color: var(--invert-font-color);
+    }
+
+    &.btn-ghost:focus,
+    &.btn-ghost:hover {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+      z-index: 2;
+    }
+  }
+
+  &.btn-error {
+    color: var(--invert-font-color);
+    background-color: var(--error-color);
+    border: 1px solid var(--error-color);
+
+    &:hover,
+    &:focus:not(.btn-ghost) {
+      background-color: var(--error-color);
+      border-color: var(--error-color);
+    }
+
+    &.btn-ghost {
+      border-color: var(--error-color);
+      color: var(--error-color);
+    }
+
+    &.btn-ghost:focus,
+    &.btn-ghost:hover {
+      border-color: var(--error-color);
+      color: var(--error-color);
+      z-index: 2;
+    }
+  }
+
+  &.btn-primary {
+    color: var(--invert-font-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+
+    &:hover,
+    &:focus:not(.btn-ghost) {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    &.btn-ghost {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    &.btn-ghost:focus,
+    &.btn-ghost:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      z-index: 2;
+    }
+  }
+
+  &.btn-ghost {
+    border-color: var(--font-color);
+    color: var(--font-color);
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+      border-color: var(--tertiary-color);
+      color: var(--tertiary-color);
+      z-index: 2;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.btn-group {
+  overflow: auto;
+
+  .btn {
+    float: left;
+  }
+
+  .btn-ghost:not(:first-child) {
+    margin-left: -1px;
+  }
+}

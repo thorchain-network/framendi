@@ -1,0 +1,269 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--font-color);
+  font-size: var(--global-font-size);
+
+  td,
+  th {
+    vertical-align: middle;
+    border: 1px solid var(--font-color);
+    line-height: 1;
+    height: 2.23em;
+    padding: calc(var(--global-space) / 2);
+  }
+}
+
+table#vgt-table {
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .nopad {
+    padding: 0 5px;
+
+    > * {
+      vertical-align: middle;
+    }
+  }
+
+  .zeropad {
+    padding: 0;
+  }
+
+  .line-numbers {
+    border: 0;
+    border-left: 1px solid var(--font-color);
+    border-right: 1px solid var(--font-color);
+    text-align: center;
+  }
+
+  th {
+    background: var(--background-color-secondary);
+    white-space: nowrap;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    cursor: default;
+    color: var(--font-color);
+
+    svg.sfg {
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  tbody {
+    &:last-child {
+      border-bottom: 1px solid var(--font-color);
+    }
+
+    td {
+      border-color: var(--grid-color);
+
+      &:last-child {
+        border-right-color: var(--font-color);
+      }
+    }
+
+    tr:last-child {
+      td {
+        border-bottom-color: var(--font-color);
+      }
+    }
+  }
+
+  thead {
+    .line-numbers {
+      border-top: 1px solid var(--font-color);
+      border-right: 0;
+    }
+
+    th {
+      position: relative;
+      border-top-color: var(--font-color);
+      border-bottom-color: var(--font-color);
+      border-left: 0;
+      border-right: 0;
+
+      &:first-child {
+        border-left: 1px solid;
+      }
+
+      &:last-child {
+        border-right: 1px solid;
+      }
+
+      & > button {
+        appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        > span {
+          visibility: hidden;
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+
+  & tr.highlight-row {
+    background-color: var(--highlight-color);
+  }
+
+  & tr.highlight-row-churn {
+    font-weight: bold;
+  }
+
+  & tr.churn-marked {
+    background-color: var(--warning-color);
+  }
+
+  & tr.churn-out {
+    background-color: var(--error-color);
+  }
+
+  & tr.churn-in {
+    background-color: var(--success-color);
+  }
+
+  & .low-score {
+    color: var(--error-color-darker) !important;
+  }
+
+  & .lower-version {
+    color: var(--error-color-darker) !important;
+  }
+
+  & .higher-version {
+    color: var(--success-color-darker) !important;
+  }
+
+  & .down {
+    color: var(--error-color-darker) !important;
+    font-size: 1.33em;
+  }
+
+  & .up {
+    color: var(--success-color-darker) !important;
+    font-size: 1.33em;
+  }
+
+  & .pdown {
+    color: var(--price-decrease) !important;
+    animation: flashFade 0.66s ease-in-out;
+    --flash-color: #f443360a;
+  }
+
+  & .pup {
+    color: var(--price-increase) !important;
+    animation: flashFade 0.5s ease-in-out;
+    --flash-color: #4caf500a;
+  }
+
+  & tr:hover {
+    background-color: var(--highlight-color);
+  }
+
+  .vgt-checkbox-col {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover {
+      color: var(--success-color-darker);
+      background-color: inherit;
+    }
+  }
+}
+
+.vgt-right-align {
+  text-align: right;
+}
+
+.vgt-left-align {
+  text-align: left;
+}
+
+.vgt-center-align {
+  text-align: center;
+}
+
+.vgt-pull-left {
+  float: left !important;
+}
+
+.vgt-pull-right {
+  float: right !important;
+}
+
+.vgt-clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.vgt-responsive {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.tix {
+  @extend .normflex;
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.spacing {
+    > *:not(:last-child) {
+      padding-right: 4px;
+    }
+  }
+}
+
+@keyframes flashFade {
+  0% {
+    background-color: initial;
+  }
+  50% {
+    background-color: var(--flash-color);
+  }
+  100% {
+    background-color: initial;
+  }
+}

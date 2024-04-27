@@ -1,0 +1,60 @@
+.frame {
+  border: 1px solid var(--font-color);
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+
+  .column {
+    padding: 13px 26px 26px;
+
+    h1 {
+      padding-top: 0;
+    }
+
+    .stats-wrapper:last-child {
+      .hr:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    white-space: nowrap;
+    display: table;
+
+    .row {
+      display: table-row;
+
+      .cell {
+        display: table-cell;
+        padding: 4px 0;
+        width: 100%;
+
+        svg {
+          vertical-align: text-bottom;
+          width: 18px;
+          height: 18px;
+        }
+
+        &:first-child {
+          padding-right: 26px;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .hr {
+    height: 1px;
+    margin: 13px 0 26px 0;
+    width: 100%;
+    background-color: var(--font-color);
+  }
+}
